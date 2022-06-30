@@ -13,10 +13,10 @@ socket.emit("joinRoom", { username, room });
 socket.on("roomUsers", function ({ room, users }) {
     outputRoomName(room);
     outputUsers(users);
+
 })
 
 socket.on("message", function (message) {
-    console.log(message);
     outputMessage(message);
     chatMessage.scrollTop = chatMessage.scrollHeight;
 });

@@ -1,11 +1,9 @@
-const moment = require("moment");
-
 function formatMessage(userName, text) {
 
     return {
         userName,
         text,
-        time: moment().format("h:mm a"),
+        time: new Date().toLocaleString("en-US", { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short', hourCycle: 'h12' }),
     };
 }
 

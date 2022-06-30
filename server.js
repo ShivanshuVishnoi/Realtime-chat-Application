@@ -8,7 +8,7 @@ const io = socketIo(server);
 const formatMessage = require('./utils/message');
 const { userJoin, getCurrentUser, userLeave, getRoomUser } = require('./utils/user');
 
-const botName = "ChatMania Bot";
+const botName = "OurChat Bot";
 
 app.use(express.static("public"));
 
@@ -19,7 +19,7 @@ io.on("connection", function (socket) {
         socket.join(user.room);
 
         socket.emit("message", formatMessage(botName,
-            "Welcome to chatMania!."));
+            "Welcome to OurChat!."));
 
         socket.broadcast.to(user.room).emit("message",
             formatMessage(botName, `${user.username} has joined the chat.`));
@@ -41,7 +41,7 @@ io.on("connection", function (socket) {
         const user = userLeave(socket.id);
         if (user) {
             io.to(user.room).emit("message",
-                formatMessage(botName, `${user.username} has left the chat`));
+                formatMessage(botName, `${user.username} has left the chat.`));
 
             io.to(user.room).emit("roomUsers", {
                 room: user.room,

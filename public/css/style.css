@@ -14,11 +14,43 @@
 	padding: 0;
 }
 
+
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	background: var(--light-color);
-	margin: 20px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.main {
+	width: 450px;
+	height: 500px;
+	background: red;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+
+.main2 {
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #000;
+}
+
+#chk {
+	display: none;
+}
+
+.signup {
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
 ul {
@@ -32,7 +64,6 @@ a {
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
-	background: var(--light-color);
 	color: var(--dark-color-a);
 	border: 0;
 	font-size: 17px;
@@ -42,13 +73,11 @@ a {
 
 .chat-container {
 	max-width: 1100px;
-	background: #fff;
 	margin: 30px auto;
 	overflow: hidden;
 }
 
 .chat-header {
-	background: var(--dark-color-a);
 	color: #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -64,7 +93,6 @@ a {
 }
 
 .chat-sidebar {
-	background: var(--dark-color-b);
 	color: #fff;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
@@ -101,7 +129,6 @@ a {
 .chat-messages .message .meta {
 	font-size: 15px;
 	font-weight: bold;
-	color: var(--dark-color-b);
 	opacity: 0.7;
 	margin-bottom: 7px;
 }
@@ -112,7 +139,6 @@ a {
 
 .chat-form-container {
 	padding: 20px 30px;
-	background-color: var(--dark-color-a);
 }
 
 .chat-form-container form {
@@ -136,14 +162,12 @@ a {
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: var(--dark-color-a);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
 
 .join-main {
 	padding: 30px 40px;
-	background: var(--dark-color-b);
 }
 
 .join-main p {
@@ -184,6 +208,6 @@ a {
 	}
 
 	.chat-sidebar {
-		display: none;
+		display: block;
 	}
 }
